@@ -1,5 +1,3 @@
-$blue: blue;
-
-body {
-  background-color: greenyellow;
-}
+@import "modules/all";
+@import "vendors/normalize";
+@import "partials/base";

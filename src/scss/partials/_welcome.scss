@@ -1,0 +1,27 @@
+.welcome {
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: $fw-n;
+    color: $dark-blue;
+    line-height: 1.5;
+    text-align: center;
+
+    span {
+      @include sans-serif($fs: 2.5em, $color: $accent);
+      display: block;
+      // color: $accent;
+      // font-family: $ff-ss;
+      // display: block;
+      // font-size: 5.5rem;
+      // letter-spacing: $letter-spacing;
+    }
+  }
+}
