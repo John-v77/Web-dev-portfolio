@@ -17,6 +17,7 @@
     span {
       @include sans-serif($fs: 2.5em, $color: $accent);
       display: block;
+      // or can be on seperate lines
       // color: $accent;
       // font-family: $ff-ss;
       // display: block;
@@ -24,4 +25,25 @@
       // letter-spacing: $letter-spacing;
     }
   }
+  /* to be fixes as is not working
+
+            h1:before {
+              &::before &::after {
+                content: "";
+                display: inline-block;
+
+                width: 60%;
+                height: 1px;
+                background: $dark-blue;
+              }
+            }
+
+            &::before {
+              margin: 0 auto 2em;
+            }
+            &::after {
+              margin: 2em auto 0;
+            }
+            
+            */
 }
