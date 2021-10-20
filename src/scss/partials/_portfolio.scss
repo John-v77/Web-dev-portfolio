@@ -1,0 +1,42 @@
+.porftfolio{
+    text-align: center;
+    background-color: $light-gray;
+    padding: 10em 0;
+}
+
+.portfolio-item{
+    position: relative;
+    overflow: hidden;
+
+    img{
+        display: block;
+    }
+
+    figcaption{
+        position:absolute;
+        top:0;
+        bottom: 0;
+        right:0;
+        left: 0;
+        padding: 3em;
+        background: rgba($dark-blue, .6);
+        color: $white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+
+.portfolio-title{
+    color: $white;
+    font-size: 3.65em;
+    margin-bottom: auto;
+}
+
+.portfolio-link{
+    color:$white;
+    font-weight: $fw-b;
+    font-size: 1.1rem;
+}
