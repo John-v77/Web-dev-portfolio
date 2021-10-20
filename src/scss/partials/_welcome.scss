@@ -28,14 +28,7 @@
   /* to be fixes as is not working
 
             h1:before {
-              &::before &::after {
-                content: "";
-                display: inline-block;
 
-                width: 60%;
-                height: 1px;
-                background: $dark-blue;
-              }
             }
 
             &::before {
