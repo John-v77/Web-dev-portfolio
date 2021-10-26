@@ -3,7 +3,14 @@ nav{
 
 
     .menu-btn{
-        position: relative;
+        //position
+        position: absolute;
+        top:3rem;
+        left:3rem;
+        border: 0;
+        //---
+
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -12,7 +19,6 @@ nav{
         background: transparent;
         cursor: pointer;
         transition: all .5s ease-in-out;
-        background-color: $dark-blue;
 
         .menu-btn_burger,
         .menu-btn_burger::after,
@@ -21,9 +27,9 @@ nav{
             // padding: 0;
             width: 50%;
             height: 3px;
-            background: $white;
+            background: $dark-blue;
             border-radius: 2px;
-            box-shadow: 0 2px 2px rgba(255, 101, 47, .2);
+            box-shadow: 0 2px 2px rgba(17, 17, 17, 0.2);
             transition: all 0.3s ease-in-out;
         }
     
@@ -62,6 +68,45 @@ nav{
     
 }
 
+
+nav {
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    
+    ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: stretch;
+    background: $accent;
+    }
+
+    a{
+    @include sans-serif($fs: 4rem, $color:$dark-blue);
+    text-decoration: none;
+    display: inline-block;
+    padding: 9.1vh 2rem;
+    width: 100%;
+    line-height: 1;    
+    }
+
+    li{
+        border-bottom: 1px solid $dark-blue;
+        text-align: center;
+    }
+
+    li:hover{
+        background: rgba($dark-blue, .5)
+    }
+}
 
 
 
