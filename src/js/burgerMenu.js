@@ -1,6 +1,10 @@
-const navMenu = document.querySelector('.menu-btn')
+const burgerBtn = document.querySelector('.menu-btn')
+const navMenu = document.querySelector('body')
 
-navMenu.addEventListener('click', _ => {
-    console.log('click')
+
+burgerBtn.addEventListener('click', _ => {
+    burgerBtn.classList.toggle('btn-open')
     navMenu.classList.toggle('nav-open')
 })
+
+// -----------------------------------------------

@@ -36,18 +36,68 @@
       }
     }
   }
-  /* to be fixes as is not working
 
-            h1:before {
+  .menu-btn{
+    //position
+    position: absolute;
+    top:1rem;
+    left:1rem;
+    z-index: 11;
+    // - - - 
 
-            }
 
-            &::before {
-              margin: 0 auto 2em;
-            }
-            &::after {
-              margin: 2em auto 0;
-            }
-            
-            */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    background: transparent;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    .menu-btn_burger,
+    .menu-btn_burger::after,
+    .menu-btn_burger::before{
+        // border: 0;
+        // padding: 0;
+        width: 50%;
+        height: 3px;
+        background: $dark-blue;
+        border-radius: 20px;
+        box-shadow: 0 2px 2px rgba(17, 17, 17, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-btn_burger::after,
+    .menu-btn_burger::before{
+        content: '';
+        position: absolute;
+    }
+
+    .menu-btn_burger::before{
+        transform: translateY(-0.5rem);
+    }
+
+    .menu-btn_burger::after{
+        transform: translateY(0.5rem);
+    }
+  }
+
+  .menu-btn.btn-open{
+      .menu-btn_burger{
+          transform: translateX(-50px);
+          background: transparent;
+          box-shadow: none;
+      }
+
+      .menu-btn_burger::before{
+          width: 100%;
+          transform: rotate(45deg) translate(2.2rem, -2.2rem)
+      }
+
+      .menu-btn_burger::after{
+          width: 100%;
+          transform: rotate(-45deg) translate(2.2rem, 2.2rem)
+      }
+  }
 }
