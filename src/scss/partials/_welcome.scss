@@ -43,6 +43,9 @@
     top:1rem;
     left:1rem;
     z-index: 11;
+    @include mq{
+      display: none;
+    }
     // - - - 
 
 
