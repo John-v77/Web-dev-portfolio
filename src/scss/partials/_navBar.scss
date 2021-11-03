@@ -70,6 +70,19 @@ nav {
         li:hover{
             background: rgba($dark-blue, .2)
         }
+
+        &.scrolled{
+            // height: 50px;
+            background: $dark-blue;
+            a{
+            padding-bottom: 0.8rem;
+            color:rgba($white, .8)
+            }
+
+            li:hover{
+                background: rgba($white, .2)
+            }
+        }
     }
 }
 
