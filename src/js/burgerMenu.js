@@ -1,3 +1,4 @@
+// -----------   Burger Menu Bth - for mobile ------------------------------
 const burgerBtn = document.querySelector('.menu-btn')
 const navMenu = document.querySelector('body')
 
@@ -7,7 +8,7 @@ burgerBtn.addEventListener('click', _ => {
     navMenu.classList.toggle('nav-open')
 })
 
-// -----------------------------------------------
+// -------------------change Navbar background on scroll -------------------
 
 
 const navBar = document.querySelector('nav')
@@ -22,3 +23,13 @@ window.addEventListener('scroll', () =>{
         navBar.classList.remove('scrolled')
     }
 })
+
+
+// --------------slide out navigation if linked clicked on mobile ----------
+
+navBar.addEventListener('click', _=>{
+    burgerBtn.classList.remove('btn-open')
+    navMenu.classList.remove('nav-open')
+})
+
+
