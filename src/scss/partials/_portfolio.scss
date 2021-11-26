@@ -70,8 +70,13 @@
     .portfolio-items{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.5em;
-        margin: 0 0.5em;
+        gap: 0.75em;
+        margin:2em;
+
+
+        @include mq{
+            grid-template-columns: repeat(4,1fr);
+        }
     }
 
     // .portfolio-item.featured{

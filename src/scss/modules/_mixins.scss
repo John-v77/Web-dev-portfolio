@@ -12,3 +12,12 @@
     }
 }
 
+// for bigger websites is recomend it to have a mixin for each screen size 
+// and variables to help adjusting
+
+@mixin mq ($width: 50em) {
+    //gets the view port
+    @media(min-width: $width){
+        @content;  //this line allows the content to be added here in the mixin
+    }
+}

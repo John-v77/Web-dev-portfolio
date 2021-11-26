@@ -11,8 +11,12 @@
     font-size: 1.5rem;
     font-weight: $fw-n;
     color: $dark-blue;
-    line-height: 1.5;
+    line-height: 1.8;
     text-align: center;
+    @include mq{
+      font-size: 3vw;
+      line-height: 2;
+    }
 
     span {
       @include sans-serif($fs: 2.5em, $color: $accent);
@@ -22,7 +26,14 @@
       // font-family: $ff-ss;
       // display: block;
       // font-size: 5.5rem;
+      
+      //debateble look
       // letter-spacing: $letter-spacing;
+      @include mq{
+        font-size: 6vw;
+        letter-spacing:15px
+        
+      }
     }
   }
   /* to be fixes as is not working

@@ -4,6 +4,10 @@ body {
   line-height: 1.6;
   background:$white;
   font-size: .875rem;
+  
+  @include mq{
+    font-size: 1.125em;
+  }
 
 
 }
@@ -27,6 +31,10 @@ h1 {
 
 h2 {
   @include sans-serif($fs: 2rem);
+  @include mq{
+    font-size: 2.6rem;
+    letter-spacing:9px;
+  }
 }
 
 p {

@@ -10,6 +10,9 @@
       background: rgba($white, 0.5);
       display: block;
       margin: 1em auto 0;
+      @include mq{
+        width: 35%;
+      } 
     }
   }
 
