@@ -4,11 +4,23 @@
     padding: 10em 0;
 }
 
-.portfolio-item{
+#h1-port{
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 2em;
+    // font-family: "Lato";
+    @include mq{
+        margin-left: 2.5rem;
+    }
+}
+
+.portfolio-item{ 
     position: relative;
     overflow: hidden;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 
     img{
         display: block;
@@ -22,15 +34,34 @@
         bottom: 0;
         right:0;
         left: 0;
-        padding: 3em;
-        background: rgba($dark-blue, .6);
+        padding: 0 0 0.1em 0.7em;
+        background: linear-gradient(0deg,  rgba($dark-blue, .95) 28%, rgba($dark-blue, .10) 28%);
         color: $white;
         text-align: left;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         transition: top ease-in-out 250ms;
         
     }
+
+    figcaption h2{
+        font-size: 1.1em;
+        font-family: 'Merriweather';
+        letter-spacing: 0.1em;
+        font-size: $fw-n;
+        margin-bottom: 0.2em;
+    }
+
+
+    figcaption p{
+        margin-bottom: 0;
+    }
+
+    figcaption p:nth-child(3){
+        text-align: right;
+    }
+
 
 
     //This needs to be fixed
@@ -69,13 +100,22 @@
 @supports(display: grid){
     .portfolio-items{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:1fr;
         gap: 0.75em;
         margin:2em;
 
 
         @include mq{
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(3,1fr);
+
+            .porftfolio h1{
+                font-size: 3em;
+            }
+
+            .portfolio-item figcaption{
+                background: linear-gradient(0deg,  rgba($dark-blue, .95) 28%, rgba($dark-blue, .10) 28%);
+                padding:0.7em;
+            }
         }
     }
 
