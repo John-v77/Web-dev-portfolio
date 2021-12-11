@@ -1,8 +1,14 @@
 .contact {
     @include container;
     padding: 5em 0;
+    @include mq{
+    padding-top: 7em;
+    }
+
+
     h1{
         text-align: center;
+        font-size: 2em;
     }
 }
 
@@ -12,19 +18,14 @@ form{
 
     @supports(display: grid){
         @include mq{
-        width: 80%;
-        margin: 10%;
-        display: grid;
-        grid-column-gap:0.75em;
-        grid-template-areas:    "name email" 
-                                "message message"   
-                                "button .";
-        .name{grid-area : name};
-        .email{grid-area : email};
-        .message{grid-area : message;
-                textarea {height: 10em;}}
-        .button{grid-area : button};
-        }
+            width: 80%;
+            margin-left: 10%;
+            padding: 0em 0 4em;
+            h1{
+                padding: 0;
+                margin: 0;
+            }
+        } 
     }
 }
 
@@ -49,7 +50,7 @@ input, textarea{
 
 .btn{
     display: inline-block;
-    width: auto;
+    width: 6rem;
     margin-top: 1em;
     margin-left: auto;
     background: $accent;
@@ -57,8 +58,6 @@ input, textarea{
     color: white;
     // @include sans-serif ($sf: 2.5rem, $color: $white);
     padding: .5em 1.5em;
-
-        
+    border-radius: 4px;
     }
-
 

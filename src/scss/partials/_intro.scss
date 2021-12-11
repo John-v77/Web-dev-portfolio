@@ -39,3 +39,10 @@
   display: block;
   max-height: 30vh;
 }
+
+
+@include mq{
+  .intro{
+    height: 100vh;
+  }
+}

@@ -1,17 +1,17 @@
-.porftfolio{
+.portfolio{
+    background-color: red;
     text-align: center;
     background-color: $light-gray;
-    padding: 10em 0;
+    padding: 5em 0;
+    @include mq{
+        min-height: 80vh;
+      }
 }
 
 #h1-port{
-    margin-left: 2rem;
     font-weight: 600;
     font-size: 2em;
-    // font-family: "Lato";
-    @include mq{
-        margin-left: 2.5rem;
-    }
+    margin-bottom: 3rem;
 }
 
 .portfolio-item{ 
@@ -21,6 +21,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
 
     img{
         display: block;
@@ -42,6 +43,7 @@
         flex-direction: column;
         justify-content: flex-end;
         transition: top ease-in-out 250ms;
+        border-radius: 5px;
         
     }
 
