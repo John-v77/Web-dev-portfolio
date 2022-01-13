@@ -12,7 +12,6 @@ burgerBtn.addEventListener('click', _ => {
 
 
 const navBar = document.querySelector('nav')
-console.log(navBar)
 
 window.addEventListener('scroll', () =>{
     const scrollPos = window.scrollY;

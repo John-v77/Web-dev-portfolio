@@ -1,17 +1,23 @@
 .portfolio{
-    background-color: red;
     text-align: center;
     background-color: $light-gray;
-    padding: 5em 0;
+    padding: 6em 0;
     @include mq{
         min-height: 80vh;
+        padding: 7em 0 4em;
       }
 }
 
 #h1-port{
-    font-weight: 600;
-    font-size: 2em;
+    font-size: 2rem;
+    letter-spacing:9px;
     margin-bottom: 3rem;
+    font-family: $ff-ss;
+    color:(rgba(black, 0.8));
+    @include mq{
+        font-size: 3vw;
+        margin-bottom: 6rem;
+      }
 }
 
 .portfolio-item{ 
@@ -78,17 +84,17 @@
     font-size: 3.65em;
     margin-bottom: auto;
 
-    .featured & {
-        font-size: 5rem;
-    }
+    // .featured & {
+    //     font-size: 5rem;
+    // }
 }
 
-.portfolio-desc{
-    display: none;
-    .featured & {
-        display: block;
-    }
-}
+// .portfolio-description{
+//     display: none;
+//     .featured & {
+//         display: block;
+//     }
+// }
 
 .portfolio-link{
     color:$white;
@@ -111,7 +117,7 @@
             grid-template-columns: repeat(3,1fr);
 
             .porftfolio h1{
-                font-size: 3em;
+                font-size: 4em;
             }
 
             .portfolio-item figcaption{
