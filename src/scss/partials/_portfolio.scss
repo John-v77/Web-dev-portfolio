@@ -1,48 +1,51 @@
-.portfolio{
+.portfolio {
     text-align: center;
     background-color: $light-gray;
     padding: 6em 0;
-    @include mq{
+
+    @include mq {
         min-height: 80vh;
         padding: 7em 0 4em;
-      }
+    }
 }
 
-#h1-port{
+#h1-port {
     font-size: 2rem;
-    letter-spacing:9px;
+    letter-spacing: 9px;
     margin-bottom: 3rem;
     font-family: $ff-ss;
-    color:(rgba(black, 0.8));
-    @include mq{
+    color: (rgba(black, 0.8));
+
+    @include mq {
         font-size: 3vw;
         margin-bottom: 6rem;
-      }
+    }
 }
 
-.portfolio-item{ 
+.portfolio-item {
     position: relative;
     overflow: hidden;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
     border-radius: 5px;
 
-    img{
+    img {
         display: block;
         margin: 0;
         padding: 0;
     }
 
-    figcaption{
-        position:absolute;
-        top:0;
+    figcaption {
+        position: absolute;
+        top: 0;
         bottom: 0;
-        right:0;
+        right: 0;
         left: 0;
-        padding: 0 0 0.1em 0.7em;
-        background: linear-gradient(0deg,  rgba($dark-blue, .95) 28%, rgba($dark-blue, .10) 28%);
+        padding: 1rem 1rem 1rem 0.7em;
+        background: linear-gradient(0deg, rgba($dark-blue, .95) 28%, rgba($dark-blue, .10) 28%);
         color: $white;
         text-align: left;
         display: flex;
@@ -50,10 +53,10 @@
         justify-content: flex-end;
         transition: top ease-in-out 250ms;
         border-radius: 5px;
-        
+
     }
 
-    figcaption h2{
+    figcaption h2 {
         font-size: 1.1em;
         font-family: 'Merriweather';
         letter-spacing: 0.1em;
@@ -62,24 +65,24 @@
     }
 
 
-    figcaption p{
+    figcaption p {
         margin-bottom: 0;
     }
 
-    figcaption p:nth-child(3){
+    figcaption p:nth-child(3) {
         text-align: right;
     }
 
 
 
     //This needs to be fixed
-    &:focus figcaption{
-        top:0;
+    &:focus figcaption {
+        top: 0;
     }
 }
 
 
-.portfolio-title{
+.portfolio-title {
     color: $white;
     font-size: 3.65em;
     margin-bottom: auto;
@@ -96,8 +99,8 @@
 //     }
 // }
 
-.portfolio-link{
-    color:$white;
+.portfolio-link {
+    color: $white;
     font-weight: $fw-b;
     font-size: 1.1rem;
     text-decoration: none;
@@ -105,24 +108,24 @@
     align-self: flex-start;
 }
 
-@supports(display: grid){
-    .portfolio-items{
+@supports(display: grid) {
+    .portfolio-items {
         display: grid;
-        grid-template-columns:1fr;
-        gap: 0.75em;
-        margin:2em;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        margin: 2em;
 
 
-        @include mq{
-            grid-template-columns: repeat(3,1fr);
+        @include mq {
+            grid-template-columns: repeat(2, 1fr);
 
-            .porftfolio h1{
+            .porftfolio h1 {
                 font-size: 4em;
             }
 
-            .portfolio-item figcaption{
-                background: linear-gradient(0deg,  rgba($dark-blue, .95) 28%, rgba($dark-blue, .10) 28%);
-                padding:0.7em;
+            .portfolio-item figcaption {
+                background: linear-gradient(0deg, rgba($dark-blue, .95) 28%, rgba($dark-blue, .10) 28%);
+                padding: 0.7em;
             }
         }
     }
@@ -132,5 +135,3 @@
     //     grid-row: 1/span 2;
     // }
 }
-
-
